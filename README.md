@@ -1,19 +1,20 @@
-# Public Administration Voice Chatbot
+# Public Administration Voice Chatbot (AI Enhanced)
 
 ## Overview
 
-This project is a simple responsive web chatbot created using HTML5, CSS3 and JavaScript.
 
-The application demonstrates:
+![1](/screenshots/1.png)
+![2](/screenshots/2.png)
 
-- Basic chatbot functionality
-- Voice input using speech recognition
-- Voice output using speech synthesis
-- FAQ section
-- Contact form
-- Responsive web design
+This project is a responsive web-based voice chatbot that combines:
+- browser speech recognition
+- speech synthesis
+- a Node.js backend
+- AI-powered responses (OpenRouter / Gemini / Groq depending on configuration)
 
-The project was developed for educational purposes as part of a Responsive Web Design assignment.
+The application evolves from a simple keyword-based chatbot into a full AI voice assistant capable of natural conversation.
+
+It was developed for educational purposes as part of a web development and AI integration project.
 
 ---
 
@@ -22,176 +23,93 @@ The project was developed for educational purposes as part of a Responsive Web D
 ### Chat Interface
 
 Users can:
+- type messages manually
+- receive AI-generated responses in real time
+- interact in a conversational format
 
-- Type messages in the chat window
-- Send questions to the chatbot
-- Receive automated responses
+---
 
 ### Voice Assistant
 
-The application supports voice interaction through the browser:
+The application supports full voice interaction:
 
-- Speech-to-Text (voice input)
-- Text-to-Speech (voice output)
-- Microphone support
+- Speech-to-Text (voice input via microphone)
+- Text-to-Speech (AI responses read aloud)
+- hands-free conversation flow
 
-Users can click the microphone button and ask a question using their voice.
+Workflow:
+1. User speaks into microphone
+2. Speech is converted to text
+3. Message is sent to backend API
+4. AI generates response
+5. Response is spoken back to the user
 
-### FAQ Section
+---
 
-Provides answers to common questions regarding public administration services.
+### AI Integration
 
-### Contact Form
+The chatbot is powered by external AI APIs via a Node.js backend.
 
-Includes:
+Supported providers:
+- OpenRouter (various LLM models)
+- Google Gemini (alternative backend)
+- Groq (optional high-speed inference)
 
-- Name field
-- Email field
-- Message field
-- HTML5 validation
+The AI provides contextual and dynamic responses instead of predefined rules.
+
+---
+
+### Backend (Node.js + Express)
+
+The backend handles:
+- API requests from frontend
+- communication with AI providers
+- response formatting
+
+---
 
 ### Responsive Design
 
-The application adapts to:
-
-- Desktop devices
-- Tablets
-- Smartphones
+The interface adapts to:
+- desktop
+- tablet
+- mobile devices
 
 ---
+
 
 ## Technologies
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (frontend)
 - Web Speech API
+- Node.js
+- Express.js
+- AI APIs (OpenRouter / Gemini / Groq)
 
 ---
-
 ## Project Structure
 
 ```text
 project/
 │
+├── backend/
+│   ├── server.js
+│   ├── .env
+│   └── package.json
+│
 ├── index.html
 ├── style.css
 ├── script.js
-├── README.md
-│
-└── screenshots/
+└── README.md
+
 ```
-
----
-
-## How It Works
-
-### Keyword-Based Responses
-
-The chatbot recognizes specific keywords and returns predefined answers.
-
-Supported keywords:
-
-| Keyword | Response |
-|----------|----------|
-| kontakt | Contact information |
-| godziny | Office working hours |
-
-For any unknown question, the chatbot responds with:
-
-```text
-Nie mogę potwierdzić tej informacji.
-```
-
-### Voice Recognition
-
-The application uses the browser Speech Recognition API.
-
-Workflow:
-
-1. User clicks the microphone button.
-2. Speech is converted into text.
-3. The text is automatically inserted into the chat.
-4. The message is sent to the chatbot.
-
-### Voice Responses
-
-The application uses the Speech Synthesis API.
-
-Every chatbot response is automatically read aloud.
-
----
-
-## Running the Project
-
-### Using a Browser
-
-1. Download or clone the repository.
-2. Open `index.html`.
-3. Start chatting.
-
-### Using VS Code
-
-1. Open the project folder.
-2. Install the Live Server extension.
-3. Run `index.html` using Live Server.
-
----
-
-## Testing
-
-The following scenarios were tested:
-
-| Test | Result |
-|--------|--------|
-| Empty message | Passed |
-| Keyword "kontakt" | Passed |
-| Keyword "godziny" | Passed |
-| Unknown question | Passed |
-| Voice recognition | Passed |
-| Voice synthesis | Passed |
-| Mobile layout | Passed |
-| Tablet layout | Passed |
-| Desktop layout | Passed |
-| Contact form validation | Passed |
-
----
-
-## Browser Compatibility
-
-Best supported browsers:
-
-- Google Chrome
-- Microsoft Edge
-
-Note: Speech Recognition may not be available in all browsers.
-
----
-
-## Future Improvements
-
-Possible future enhancements:
-
-- AI API integration
-- Database connection
-- User authentication
-- Conversation history
-- Email notifications
-- PSTN/VoIP integration
-- Multi-language support
-
----
-
-## Screenshots
-
-![View](/screenshots/1.png)
-
-![Responsive web design](/screenshots/2.png)
-
 
 ## Authors
-- Maciej Markowski
-- Mateusz Ślązkiewicz
-- Jakub Rafalski
 
-Educational project demonstrating responsive web development and browser-based voice assistant functionality using HTML5, CSS3 and JavaScript.
+This project was developed as part of a collaborative educational assignment.
+
+- **Jakub Rafalski** – Frontend development, voice interface (Speech Recognition & Speech Synthesis), AI integration
+- **Maciej Markowski** – UI/UX design, HTML/CSS structure, responsive layout
+- **Mateusz Ślązkiewicz** – Project coordination, documentation, testing and feature validation
