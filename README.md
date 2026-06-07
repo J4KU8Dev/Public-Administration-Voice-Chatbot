@@ -189,9 +189,9 @@ Possible future enhancements:
 ![Responsive web design](/screenshots/2.png)
 
 
-## Author
-Maciej Markowski
-Mateusz Ślązkiewicz
-Jakub Rafalski
+## Authors
+- Maciej Markowski
+- Mateusz Ślązkiewicz
+- Jakub Rafalski
 
 Educational project demonstrating responsive web development and browser-based voice assistant functionality using HTML5, CSS3 and JavaScript.
