@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Administracji Publicznej</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Asystent AI - Administracja Publiczna</h1>
+</header>
+
+<main>
+
+    <section class="chat-section">
+        <h2>Czat</h2>
+
+        <div id="chat-box">
+            <div class="bot-message">
+                Witaj! Jak mogę pomóc?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Wpisz pytanie...">
+            <button onclick="sendMessage()">Wyślij</button>
+             <button onclick="startVoice()">🎤</button>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>FAQ</h2>
+
+        <div>
+            <h3>Jak skontaktować się z urzędem?</h3>
+            <p>Możesz skorzystać z formularza kontaktowego poniżej.</p>
+        </div>
+
+        <div>
+            <h3>Jakie są godziny pracy urzędu?</h3>
+            <p>Poniedziałek–Piątek: 8:00–16:00.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Formularz kontaktowy</h2>
+
+        <form novalidate>
+            <input type="text" placeholder="Imię" required>
+
+            <input type="email" placeholder="E-mail" required>
+
+            <textarea placeholder="Wiadomość" required></textarea>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Administracja Publiczna</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
